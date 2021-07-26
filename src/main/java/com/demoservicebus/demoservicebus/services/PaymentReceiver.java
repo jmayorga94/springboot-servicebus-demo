@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class PaymentReceiver {
 
-    private static final String QUEUE_NAME = "sbq-monusin-request";
-    private static final String DESTINATION_NAME = "sbq-monusin-response";
+    private static final String QUEUE_NAME = "";
+    private static final String DESTINATION_NAME = "";
     @Autowired
     private JmsTemplate jmsTemplate;
 
@@ -20,9 +20,11 @@ public class PaymentReceiver {
     public void  processPayment(Payment payment){
         log.info("RECEIVING MESSAGE {} ",payment);
         payment.ProcessMessage();
-        log.info("SENDING BACK TO RESPONSE");
+       /* log.info("SENDING BACK TO RESPONSE");
         SendToResponseQueue(payment);
         log.info("PAYMENT SENT");
+        *
+        */
     }
 
     private void SendToResponseQueue(Payment payment){

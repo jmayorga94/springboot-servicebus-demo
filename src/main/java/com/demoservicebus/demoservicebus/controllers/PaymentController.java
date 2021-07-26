@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class PaymentController {
 
-    private static final String DESTINATION_NAME = "sbq-monusin-request";
+    private static final String DESTINATION_NAME = "";
 
     @Autowired
     private JmsTemplate jmsTemplate;

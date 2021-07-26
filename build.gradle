@@ -29,7 +29,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation group: 'com.microsoft.azure', name: 'azure-servicebus-jms-spring-boot-starter', version: '2.3.5'
+	implementation group: 'com.azure.spring', name: 'azure-spring-boot-starter-servicebus-jms', version: '3.2.0'
 }
 
 dependencyManagement {
